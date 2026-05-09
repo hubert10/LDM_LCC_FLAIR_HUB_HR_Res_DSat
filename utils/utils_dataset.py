@@ -509,7 +509,7 @@ def downsample_sr_image(
 CLASS_TO_PHRASE = {
     "building": "buildings",
     "greenhouse": "greenhouses",
-    "swimming_pool": "swimming pool",
+    "swimming pool": "swimming pool",
     "greenhouse": "greenhouses",
     "impervious surface": "roads and paved areas",
     "pervious surface": "paths and open ground",
