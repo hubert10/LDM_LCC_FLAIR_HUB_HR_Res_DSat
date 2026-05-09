@@ -8,7 +8,7 @@ labels_configs:
         value_name:
             0  : 'building'
             1  : 'greenhouse'
-            2  : 'swimming_pool'
+            2  : 'swimming pool'
             3  : 'impervious surface'
             4  : 'pervious surface'
             5  : 'bare soil'

@@ -465,7 +465,7 @@ class FLAIRDataSet(Dataset):
         labels = torch.as_tensor(batch["labels"], dtype=torch.int32)
         batch["dates_encoding"] = torch.as_tensor(batch["dates"], dtype=torch.float)
 
-        print("----------------------------txt -----------------------------", batch["txt"]) 
+        # print("----------------------------txt -----------------------------", batch["txt"]) 
 
         # cropping the ground truth images
         labels_sr = self.downsample_single_label_map_majority_vote(labels).long()

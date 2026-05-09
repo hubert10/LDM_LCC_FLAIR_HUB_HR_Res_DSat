@@ -32,11 +32,9 @@ grad_px_loss_weight: 0.7
 temp_grad_mag_loss_weight: 0.2
 gray_value_px_loss_weight: 1.0
 
-
 timesteps: 500
 ddim_infer_steps: 20
 use_ema: false
-
 
 sd_weights: "/my_data/pretrain_weights/init_weight-sd.pt"
 cond_net_ckpt: "/my_data/pretrain_weights/LCC_SITS_MaxViT_UPerNet_16/checkpoints/last.ckpt"

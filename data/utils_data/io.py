@@ -12,7 +12,6 @@ except Exception:
 # except Exception:
 #     DATA_DIR = "/my_data"
 
-
 def read_patch(raster_file: str, channels: list = None) -> np.ndarray:
     """
     Reads patch data from a raster file.
