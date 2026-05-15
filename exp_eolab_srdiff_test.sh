@@ -20,3 +20,6 @@ source /home/eouser/flair_venv/bin/activate
 which python
 cd $HOME/exp_2026/LDM_LCC_FLAIR_HUB_HR_Res_DSat
 python trainer.py --config_file=./configs/train_main/ --exp_name srdiff_maxvit_ltae_ckpt --hparams="diff_net_ckpt=/my_data/Results/LDM_LCC_FLAIR_HUB_HR_Res_DSat/checkpoints/srdiff_maxvit_ltae_ckpt" --infer
+
+
+

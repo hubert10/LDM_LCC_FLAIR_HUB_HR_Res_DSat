@@ -607,3 +607,8 @@ if __name__ == "__main__":
     else:
         trainer.test()
         trainer.generate_metrics()
+
+
+
+# python trainer.py --config_file=./configs/train/ --exp_name srdiff_maxvit_ltae_ckpt --hparams="diff_net_ckpt=./results/checkpoints/srdiff_maxvit_ltae_ckpt" --infer
+                

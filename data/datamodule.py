@@ -83,7 +83,6 @@ class FlairDataModule(LightningDataModule):
         Returns:
             FLAIRDataSet: The created dataset.
         """
-
         return FLAIRDataSet(
             self.config, dict_paths=dict_paths, use_augmentations=use_augmentations
         )

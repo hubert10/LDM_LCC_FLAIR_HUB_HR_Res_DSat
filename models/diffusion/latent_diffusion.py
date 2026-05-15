@@ -875,7 +875,7 @@ class LatentDiffusion(DDPM):
 
         return fold, unfold, normalization, weighting
 
-    def apply_cond_encoder(self, img_lr, dates):
+    def apply_cond_lr_encoder(self, img_lr, dates):
         # features are extracted at 1.6, 3.2, 6.4m GSD
         _, cond = self.cond_net(img_lr, dates)
         # cond = [cond * self.scale_factor for cond in cond] # scaling the cond features
@@ -966,7 +966,7 @@ class LatentDiffusion(DDPM):
         )
         final_loss = hparams["main_loss_weight"] * loss + aux_loss
         return final_loss, sr_outputs
-
+    
 
     def forward(
         self,
@@ -1128,7 +1128,7 @@ class LatentDiffusion(DDPM):
         save_iterations: bool = False,
     ):
         cond = self.apply_cond_lr_encoder(img_lr, dates)
-        # cond_hr = self.apply_cond_hr_encoder(img)
+        cond_hr = self.apply_cond_hr_encoder(img)
         txt = self.get_learned_conditioning(txt)
 
         # Assert shape, size, dimensionality
@@ -1162,7 +1162,7 @@ class LatentDiffusion(DDPM):
                     c=[feat[:, j] for feat in cond],  # Encoded LR Sentinel-2 images
                     txt=txt,
                     mtd=mtd,
-                    # x_HR=cond_hr,  # HR image
+                    x_HR=None,  # HR image
                     t=step,
                     index=custom_steps - i - 1,
                     use_original_steps=False,

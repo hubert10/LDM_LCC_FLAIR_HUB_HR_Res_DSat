@@ -32,9 +32,9 @@ from utils.utils_dataset import (
     lut_classes,
     CLASS_TO_PHRASE
 )
-
-
 from data.utils_data.io import DATA_DIR
+
+
 class FLAIRDataSet(Dataset):
     """
     PyTorch Dataset for multimodal remote sensing data.

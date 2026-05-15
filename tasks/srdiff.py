@@ -489,6 +489,7 @@ class SRDiffTrainer(Trainer):
         start_time = time.time()
 
         img_sr, final_loss = self.model.latent_diff.sample(
+            img,
             sc_img_hr,
             img_lr,
             img_lr_up,

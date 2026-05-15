@@ -89,7 +89,6 @@ def get_paths(config: Dict[str, Any], split: str = "train") -> Dict:
         dict_paths["SENTINEL2_MSK-SC"] = paths["SENTINEL2_MSK-SC"].tolist()
     else:
         dict_paths["SENTINEL2_MSK-SC"] = []
-
     return dict_paths
 
 

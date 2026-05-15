@@ -652,6 +652,7 @@ class DDIMSampler(object):
         x: torch.Tensor,
         c: torch.Tensor,
         txt: torch.Tensor,
+        mtd: torch.Tensor,
         x_HR: torch.Tensor,
         t: int,
         index: int,
@@ -692,7 +693,7 @@ class DDIMSampler(object):
         b, *_, device = *x.shape, x.device
 
         # apply model with or without unconditional conditioning
-        e_t = self.model.apply_model(x, t, txt, c, x_HR)
+        e_t = self.model.apply_model(x, t, txt, c, mtd, x_HR)
 
         # get alphas, alphas_prev, sqrt_one_minus_alphas, and sigmas
         alphas = self.model.alphas_cumprod if use_original_steps else self.ddim_alphas
